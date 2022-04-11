@@ -1,13 +1,10 @@
-.home {
-      display: flex;
-      justify-content: center;
-}
+/* ******************************** Gallery Component Styles   ******************************** */
 .gallery {
       display: flex;
       justify-content: center;
 }
 
-.top-bar{
+.top-bar {
       display: flex;
       margin: 2rem 0;
       display: flex;
@@ -15,12 +12,12 @@
       align-items: center;
 }
 
-.filters{
+.filters {
       display: flex;
 }
 
-.filter{
-      margin: 2rem ;
+.filter {
+      margin: 2rem;
 }
 
 .search-bar input {
@@ -58,49 +55,39 @@ img {
 
 input:focus {
       outline: none;
-    }
+}
 
-.pagination-filters{
+/* ******************************** Pagination Component Styles   ******************************** */
+
+.pagination-filters {
       display: flex;
 }
 
-.pagination{
+.pagination {
       display: flex;
       justify-content: center;
 }
 
-.pagination .page-number{
+.pagination .page-number {
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
       font-weight: 600;
 }
-/* @media screen and (max-width: 992px) {
-      .image-container {
-            background-color: coral;
-      }
-    } */
 
-@media screen and (max-width: 600px) {
+/* ******************************** Responsiveness for Tablets   ******************************** */
+
+@media screen and (max-width: 992px) {
       .image-container {
             display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            padding: 5px;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 2px;
+            gap: 10px;
 
       }
 
-      img {
-            width: 100%;
-            /* You can set the dimensions to whatever you want */
-            height: 400px;
-            object-fit: fill;
-      }
-
-      .top-bar{
-            display: grid;
+      .top-bar {
+            display: flex;
             margin: 2rem 0;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
       }
 
       .search-bar input {
@@ -123,7 +110,51 @@ input:focus {
             font-weight: 500;
             margin-right: 0;
       }
-      .filter{
-            margin: 0 1rem ;
+}
+
+/* ********************************  Responsiveness for Mobiles  ******************************** */
+
+@media screen and (max-width: 600px) {
+      .image-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 5px;
+
+      }
+
+      img {
+            width: 100%;
+            height: 400px;
+            object-fit: fill;
+      }
+
+      .top-bar {
+            display: grid;
+            margin: 2rem 0;
+      }
+
+      .search-bar input {
+            height: 2.1rem;
+            width: 14rem;
+            border: 1px solid #bdc1c6;
+            margin-left: 0.7rem;
+      }
+
+      .search-bar button {
+            background-color: #bdc1c6;
+            border: none;
+            color: white;
+            height: 2.4rem;
+            width: 5.5rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            margin-right: 0;
+      }
+
+      .filter {
+            margin: 0 1rem;
       }
 }
